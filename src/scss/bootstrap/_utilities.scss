@@ -1,0 +1,18 @@
+//@import "utilities/align"; // -- CARMINE --: Innecesarios ya que solo se usaría flexbox
+@import "utilities/background";
+@import "utilities/borders"; // -- CARMINE --: Agregado nuevas utilidades de bordes
+//@import "utilities/clearfix"; // -- CARMINE --: Innecesarios ya que solo se usaría flexbox
+@import "utilities/display";
+@import "utilities/embed";
+@import "utilities/flex"; // -- CARMINE --: Clases modificadas
+@import "utilities/float";
+@import "utilities/interactions";
+@import "utilities/overflow";
+@import "utilities/position"; // -- CARMINE --: Clases modificadas
+@import "utilities/screenreaders";
+@import "utilities/shadows"; // -- CARMINE --: Clases agregadas
+@import "utilities/sizing";
+@import "utilities/spacing"; // -- CARMINE --: Clases modificadas
+@import "utilities/stretched-link";
+@import "utilities/text";  // -- CARMINE --: Clases modificadas
+@import "utilities/visibility";

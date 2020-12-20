@@ -1,0 +1,119 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+.text-monospace { font-family: $font-family-monospace !important; }
+
+// Alignment
+
+.text-justify  { text-align: justify !important; }
+.text-wrap     { white-space: normal !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { @include text-truncate(); }
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+
+    // -- CARMINE --: Agregado tamaño de los textos en multiplos de ems
+    .text#{$infix}-0\.9em { font-size: .9em; }
+    .text#{$infix}-1em    { font-size: 1em; }
+    .text#{$infix}-1\.1em { font-size: 1.1em; }
+    .text#{$infix}-1\.3em { font-size: 1.3em; }
+    .text#{$infix}-1\.5em { font-size: 1.5em; }
+
+    // -- CARMINE --: Tamaños específicos de textos
+    .text#{$infix}-h1 {  @include font-size($h1-font-size); }
+    .text#{$infix}-h2 {  @include font-size($h2-font-size); }
+    .text#{$infix}-h3 {  @include font-size($h3-font-size); }
+    .text#{$infix}-h4 {  @include font-size($h4-font-size); }
+    .text#{$infix}-h5 {  @include font-size($h5-font-size); }
+    .text#{$infix}-h6 {  @include font-size($h6-font-size); }
+
+    .display#{$infix}-1 {  @include font-size($display1-size); }
+    .display#{$infix}-2 {  @include font-size($display2-size); }
+    .display#{$infix}-3 {  @include font-size($display3-size); }
+    .display#{$infix}-4 {  @include font-size($display4-size); }
+
+    // -- CARMINE --: Agregado espaciado entre letras
+    .tracking#{$infix}-normal    { letter-spacing: normal;}
+    .tracking#{$infix}-wide      { letter-spacing: .1em; }
+    .tracking#{$infix}-wider     { letter-spacing: .2em; }
+    .tracking#{$infix}-widest    { letter-spacing: .3em; }
+    .tracking#{$infix}-widest-2x { letter-spacing: .45em;}
+
+    // -- CARMINE --: Agregado espaciado entre lineas
+    .leading#{$infix}-none    { line-height: 1; }
+    .leading#{$infix}-snug    { line-height: 1.3; }
+    .leading#{$infix}-normal  { line-height: $line-height-base; }
+    .leading#{$infix}-relaxed { line-height: 1.8; }
+    .leading#{$infix}-loose   { line-height: 2.1; }
+  }
+}
+
+// Transformation
+// -- CARMINE --: Quitado el 'text'
+.lowercase  { text-transform: lowercase !important; }
+.uppercase  { text-transform: uppercase !important; }
+.capitalize { text-transform: capitalize !important; }
+// ### Lo de arriba reemplazara a lo de abajo comentado ###
+//.text-lowercase  { text-transform: lowercase !important; }
+//.text-uppercase  { text-transform: uppercase !important; }
+//.text-capitalize { text-transform: capitalize !important; }
+
+
+// Weight and italics
+// -- CARMINE --: Quitado el 'weight'
+.font-light   { font-weight: $font-weight-light !important; }
+.font-lighter { font-weight: $font-weight-lighter !important; }
+.font-normal  { font-weight: $font-weight-normal !important; }
+.font-bold    { font-weight: $font-weight-bold !important; }
+.font-bolder  { font-weight: $font-weight-bolder !important; }
+.font-italic  { font-style: italic !important; }
+// ### Lo de arriba reemplazara a lo de abajo comentado ###
+//.font-weight-light   { font-weight: $font-weight-light !important; }
+//.font-weight-lighter { font-weight: $font-weight-lighter !important; }
+//.font-weight-normal  { font-weight: $font-weight-normal !important; }
+//.font-weight-bold    { font-weight: $font-weight-bold !important; }
+//.font-weight-bolder  { font-weight: $font-weight-bolder !important; }
+//.font-italic         { font-style: italic !important; }
+
+// Contextual colors
+
+.text-white { color: $white !important; }
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value, true);
+}
+
+// -- CARMINE --: Clases no utilizable
+//.text-body { color: $body-color !important; }
+.text-muted { color: $text-muted !important; }
+
+.text-black-50 { color: rgba($black, .5) !important; }
+.text-white-50 { color: rgba($white, .5) !important; }
+
+// Misc
+
+.text-hide {
+  @include text-hide($ignore-warning: true);
+}
+
+.text-decoration-none { text-decoration: none !important; }
+
+.text-break {
+  word-break: break-word !important; // Deprecated, but avoids issues with flex containers
+  word-wrap: break-word !important; // Used instead of `overflow-wrap` for IE & Edge Legacy
+}
+
+// Reset
+
+.text-reset { color: inherit !important; }

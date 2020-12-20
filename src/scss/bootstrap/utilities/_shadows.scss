@@ -1,0 +1,7 @@
+// stylelint-disable declaration-no-important
+// -- CARMINE --: Clases para los hovers agregados
+.shadow-sm, .hover\:shadow-sm { box-shadow: $box-shadow-sm !important; }
+.shadow, .hover\:shadow { box-shadow: $box-shadow !important; }
+.shadow-lg, .hover\:shadow-lg { box-shadow: $box-shadow-lg !important; }
+.shadow-none, .hover\:shadow-none { box-shadow: none !important; }
+

@@ -1,0 +1,60 @@
+/*!
+ * Golding Design v1.0
+ * Copyright 2020 Carmine Maggio Carmine Maggio <carminemaggiom@gmail.com>
+ * Bootstrap y otras librerías tomadas para construir algo Nuevo!
+ *
+ */
+@import "golding/mixins";
+@import "golding/functions";
+@import "golding/transitions";
+// Efecto de ondas
+@import "waves/waves";
+
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ *
+ * Estructura modificada <carminemaggiom@gmail.com>
+ *
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+//@import "bootstrap/root"; // -- CARMINE --: Elementos root innecesarios en el CSS
+@import "bootstrap/reboot"; // -- CARMINE --: Estilos modificados
+@import "bootstrap/type";
+@import "bootstrap/images";
+//@import "bootstrap/code"; // -- CARMINE --: Innecesarios en la gran mayoría de proyectos
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons"; // -- CARMINE --: Clases modificadas
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/toasts";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/spinners";
+@import "bootstrap/utilities"; // -- CARMINE --: Clases modificadas
+@import "bootstrap/print";
+
+

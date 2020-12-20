@@ -1,0 +1,10 @@
+// Devuelve el nombre para la clase responsiva según nuevas funciones
+// Carmine Maggio - Golding Deign
+//
+//  La idea es que las clases se usen de la siguiente forma:
+//      sm-inline (Reemplaza a 'd-sm-inline')
+//      md-block (Reemplaza a 'd-block')
+//
+@function breakpoint-infix-golding($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}-");
+}

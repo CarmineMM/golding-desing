@@ -1,6 +1,7 @@
 module.exports = (env, argv) => {
     const path = require('path');
     const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
+    const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
     /**
      * Return Webpack
@@ -67,7 +68,8 @@ module.exports = (env, argv) => {
         plugins: [
             new MiniCssExtractPlugin({
                 filename: argv.mode === 'development' ? 'css/golding.css' : 'css/golding.min.css',
-            })
+            }),
+            new CleanWebpackPlugin()
         ]
     }
 }
